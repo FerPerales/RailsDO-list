@@ -1,4 +1,4 @@
 RailsDO-list
 ============
 
-A ToDo list with Rails
+A RoR ToDo list
