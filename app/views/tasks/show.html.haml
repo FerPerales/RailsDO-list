@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+	%b Description
+	= @task.description
+
+%p
+	%b Due date
+	= @task.dueDate
+
+= link_to 'Edit', edit_task_path(@task)
+= link_to 'Back', tasks_path 
