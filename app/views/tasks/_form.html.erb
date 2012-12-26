@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+<hr>
   <div class="field">
     <%= f.label :description %><br />
     <%= f.text_field :description %>
@@ -20,6 +20,7 @@
     <%= f.date_select :dueDate %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Update', :class => 'btn btn-primary' %>
   </div>
+<hr>
 <% end %>
