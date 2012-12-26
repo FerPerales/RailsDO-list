@@ -1,5 +1,5 @@
 %h1 Show detaills
-
+%hr
 %p#notice= notice
 %p
 	%b Description
@@ -8,6 +8,7 @@
 %p
 	%b Due date
 	= @task.dueDate
-
-= link_to 'Edit', edit_task_path(@task)
-= link_to 'Back', tasks_path 
+%hr
+=link_to raw("<i class='icon-pencil' title='Edit this entry'></i>"), edit_task_path(@task)
+=link_to raw("<i class='icon-trash' title='Destroy this entry'></i>"), @task, method: :delete, data: { confirm: 'Are you sure?' }   
+=link_to raw("<i class='icon-chevron-left' title='Back to task list'></i>"), tasks_path 
