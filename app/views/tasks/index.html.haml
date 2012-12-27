@@ -7,11 +7,11 @@
 
 .row
   .span12
-    %table.table.table-striped
+    %table.table.table-striped 
       %tr
         %th Description
         %th Duedate
-        %th{:colspan => "3", :style => "text-align: center"} Available actions
+        %th{:colspan => "3", :style => "text-align: center", :width => '10%'} Actions
       - @tasks.each do |task|
         %tr
           %td= task.description
