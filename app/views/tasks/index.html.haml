@@ -1,19 +1,23 @@
-%h1 Listing tasks
-
-.row.pull-right.spacer
-  = link_to 'New Task', new_task_path, {:class => 'btn btn-primary'} 
 .row
-  %table.table.table-striped
-    %tr
-      %th Description
-      %th Duedate
-      %th{:colspan => "3", :style => "text-align: center"} Available actions
-    - @tasks.each do |task|
+  .span12
+    %h1 Listing tasks
+
+.row.pull-right
+  =link_to 'New Task', new_task_path, {:class => 'button_to btn btn-primary'} 
+
+.row
+  .span12
+    %table.table.table-striped
       %tr
-        %td= task.description
-        %td= task.dueDate 
-        %td= link_to raw("<i class='icon-search' title='View this entry'></i>"), task
-        %td= link_to raw("<i class='icon-pencil' title='Edit this entry'></i>"), edit_task_path(task)
-        %td= link_to raw("<i class='icon-trash' title='Destroy this entry'></i>"), task, method: :delete, data: { confirm: 'Are you sure?' }  
+        %th Description
+        %th Duedate
+        %th{:colspan => "3", :style => "text-align: center"} Available actions
+      - @tasks.each do |task|
+        %tr
+          %td= task.description
+          %td= task.dueDate 
+          %td= link_to raw("<i class='icon-search' title='View this entry'></i>"), task
+          %td= link_to raw("<i class='icon-pencil' title='Edit this entry'></i>"), edit_task_path(task)
+          %td= link_to raw("<i class='icon-trash' title='Destroy this entry'></i>"), task, method: :delete, data: { confirm: 'Are you sure?' } 
 
 
