@@ -14,7 +14,6 @@
         %td= task.dueDate 
         %td= link_to raw("<i class='icon-search' title='View this entry'></i>"), task
         %td= link_to raw("<i class='icon-pencil' title='Edit this entry'></i>"), edit_task_path(task)
-        %td= link_to raw("<i class='icon-trash' title='Destroy this entry'></i>"), task, method: :delete, data: { confirm: 'Are you sure?' }   
-    %br
+        %td= link_to raw("<i class='icon-trash' title='Destroy this entry'></i>"), task, method: :delete, data: { confirm: 'Are you sure?' }  
 
 
